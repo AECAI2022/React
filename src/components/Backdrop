@@ -1,0 +1,15 @@
+//////////////Format of the function//////////////
+//function xxx(){
+//    return()
+//}
+//export default xxx
+//////////////////////////////////////////////////
+//export defult xx allows the external use of the code
+
+
+function Backdrop(props){
+    return <div className = 'backdrop' onClick ={props.onCancel}/>;
+}
+export default Backdrop
+
+//props.xxx can be named as you want
