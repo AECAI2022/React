@@ -3,35 +3,19 @@
 import React from 'react';
 import DataColloector from "./components/DataCollect"
 
-function upload() {
-  alert ("Data added");
-}
+
 
 function App() {
   return (
     <>
     <div>
-    <h1>Data input</h1>
-    <DataColloector text="House name"></DataColloector>
-    <DataColloector text="Design Score"></DataColloector>
-    <DataColloector text="Performace Score"></DataColloector>
-    <DataColloector text="ZipCode"></DataColloector>
-    <DataColloector text="Stories"></DataColloector>
-    <DataColloector text="Bedroom"></DataColloector>
-    <DataColloector text="Bathroom"></DataColloector>
-    <DataColloector text="Garages"></DataColloector>
-    <DataColloector text="Porches"></DataColloector>   
-    <DataColloector text="Basement"></DataColloector>   
-         <br></br>
-         <br></br>
-         <br></br>
-         <div className="actions">
-        <button className="btn" onClick={upload}>Upload</button>
-    </div>
+    <DataColloector></DataColloector>   
     </div>
     </>
+  );
+}
 
-
+export default App;
 
     //////////////Content Modular////////////////////
     // <div>
@@ -50,7 +34,7 @@ function App() {
     //     </div>
     //   </div>
     // </div>
-  );
+
 
   //<...></...> = <.../> formatting written in Html format
   //{Java script} in Html format
@@ -59,6 +43,3 @@ function App() {
   //'br' change the line
   //<Content></Content> import from other Javascript
   //className using the background, front, color format and location information that has been set up in the index.css
-}
-
-export default App;
