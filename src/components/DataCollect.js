@@ -1,25 +1,26 @@
 import { useState } from 'react';
 
 function DataColloector() {
-const [name,setName] =useState('');
-const [dscore,setDScore] =useState('');
-const [pscore,setPScore] =useState('');
-const [zipcode,setZipcode] =useState('');
-const [stories,setStories] =useState('');
-const [bedroom,setBedroom] =useState('');
-const [bathroom,setBathroom] =useState('');
-const [garages,setGarages] =useState('');
-const [porches,setPorches] =useState('Yes');
-const [basement,setBasement] =useState('Yes');
-const [plan,setPlan] =useState('');
-const [cover,setCover] =useState('');
+const [HouseID,setHouseID] =useState('');
+const [Dscore,setDScore] =useState('');
+const [Pscore,setPScore] =useState('');
+const [ZipCode,setZipcode] =useState('');
+const [Stories,setStories] =useState('');
+const [Bedroom,setBedroom] =useState('');
+const [Bathroom,setBathroom] =useState('');
+const [TotalArea,setTotalArea] =useState('Yes');
+const [Garages,setGarages] =useState('');
+const [Porches,setPorches] =useState('Yes');
+const [Basement,setBasement] =useState('Yes');
+const [Plan,setPlan] =useState('');
+const [Cover,setCover] =useState('');
 
 const [isPending, setIsPending] =useState(false);
 
 
 const handleSubmit =(e) =>{
   e.preventDefault();
-  const data = {name,dscore,pscore,zipcode,stories,bedroom,bathroom,garages,porches,basement,plan,cover};
+  const data = {HouseID,Dscore,Pscore,ZipCode,Stories,Bedroom,Bathroom,TotalArea,Garages,Porches,Basement,Plan,Cover};
   console.log(data);
   setIsPending(false);
 }
@@ -32,70 +33,77 @@ return (
         <input
           type="text"
           required
-          value={name} 
-          onChange={(event) => setName(event.target.value)}
+          value={HouseID} 
+          onChange={(event) => setHouseID(event.target.value)}
         />
         <label>Design Score</label>
         <input
           type="text"
           required
-          value={dscore} 
+          value={Dscore} 
           onChange={(event) => setDScore(event.target.value)}
         />
         <label>Performance Score</label>
         <input
           type="text"
           required
-          value={pscore} 
+          value={Pscore} 
           onChange={(event) => setPScore(event.target.value)}
         />   
         <label>ZipCode</label>
         <input
           type="text"
           required
-          value={zipcode} 
+          value={ZipCode} 
           onChange={(event) => setZipcode(event.target.value)}
         />      
         <label>Stories</label>
         <input
           type="text"
           required
-          value={stories} 
+          value={Stories} 
           onChange={(event) => setStories(event.target.value)}
         />             
         <label>Bedroom</label>
         <input
           type="text"
           required
-          value={bedroom} 
+          value={Bedroom} 
           onChange={(event) => setBedroom(event.target.value)}
         />   
         <label>Bathroom</label>
         <input
           type="text"
           required
-          value={bathroom} 
+          value={Bathroom} 
           onChange={(event) => setBathroom(event.target.value)}
+        />  
+        <label>TotalArea</label>
+        <input
+          type="text"
+          required
+          value={TotalArea} 
+          onChange={(event) => setTotalArea(event.target.value)}
         />  
        <label>Garages</label>
         <input
           type="text"
           required
-          value={garages} 
+          value={Garages} 
           onChange={(event) => setGarages(event.target.value)}
         />  
         <label>Porches</label>
         <select>
           <option value ="Yes">Yes</option>
           <option value ="No">No</option>
-          value = {porches}
+          value = {Porches}
           onChange = {(event)=> setPorches(event.target.value)}
         </select>
         <label>Basement</label>
         <select>
           <option value ="Yes">Yes</option>
           <option value ="No">No</option>
-          value = {basement}
+          value = {Basement}
           onChange = {(event)=> setBasement(event.target.value)}
         </select>
         <label>Plan</label>
